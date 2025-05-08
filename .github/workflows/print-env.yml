@@ -1,0 +1,15 @@
+name: Dummy Env Test
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print GitHub Actions environment variable
+        run: echo "GITHUB_ACTIONS=$GITHUB_ACTIONS"
+
+      - name: Print all env variables
+        run: printenv
